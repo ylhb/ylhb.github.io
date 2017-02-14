@@ -1,0 +1,22 @@
+header {
+	background: url(../images/facebook.jpg);
+	color: #fff;
+	text-align: center;
+}
+.text {
+	margin-top: 150px;
+	margin-bottom: 100px;
+}
+.text h1 {
+	font-size: 50px;
+}
+.text p {
+	font-size: 25px;
+}
+
+footer {
+	margin-top: 20px;
+}
+.copyright {
+	text-align: center;
+}

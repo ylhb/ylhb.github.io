@@ -20,3 +20,23 @@ footer {
 .copyright {
 	text-align: center;
 }
+
+@media only screen and (max-width: 768px) {
+	.text {
+		margin-top: 200px;
+		margin-bottom: 180px;
+	}
+	.text h1 {
+		font-size: 40px;
+	}
+	.text p {
+		font-size: 25px;
+	}
+
+	footer {
+		margin-top: 20px;
+	}
+	.copyright {
+		text-align: center;
+	}
+}

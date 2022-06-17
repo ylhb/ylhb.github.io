@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>SunShining</title>
-	<link rel="shortcut icon" href="favicon.ico"/>
-	<link rel="stylesheet" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" href="./css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SunShining</title>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
-	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-					<div class="text">
-						<h1>NitMoon's Blog!</h1>
-						<p>Coming soon…</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-					<p class="copyright">© 2017  Made by nitmoon.</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="text">
+            <h1>NitMoon's Blog!</h1>
+            <p>Coming soon…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <p class="copyright">© 2017 Made by nitmoon.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>
+  eruda.init();
+  const getLocationByBrowser = () => {
+    if (!window.navigator.geolocation) {
+      console.log("当前浏览器不支持定位!");
+    }
+
+    window.navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const location = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+        console.log("支持!", position, location);
+      },
+      (err) => {
+        console.log("当前浏览器不支持定位!", err);
+      },
+      {
+        timeout: 5 * 1000,
+      }
+    );
+  }
+  getLocationByBrowser();
+</script>
 </html>
